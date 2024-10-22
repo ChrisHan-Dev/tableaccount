@@ -15,13 +15,15 @@ function AccTable() {
 
   return (
     <div className="table-container">
+      <div className="input-box">
       <form action="">
-        <input type="text" placeholder="Enter your name" />
-        <input type="text" placeholder="Enter your email" />
-        <input type="text" placeholder="Enter your password" />
-        <button>Add</button>
+        <input className="input-text" type="text" placeholder="Enter your name" onChange={e =>setName(e.target.value)}/>
+        <input className="input-text" type="text" placeholder="Enter your email" onChange={e =>setEmail(e.target.value)}/>
+        <input className="input-text" type="text" placeholder="Enter your password" onChange={e =>setPassword(e.target.value)}/>
+        <button className="add-button">Add</button>
       </form>
-      <table>
+      </div>
+      <table className="styled-table">
         <thead>
           <tr>
             <th>ID</th>
