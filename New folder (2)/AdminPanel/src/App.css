@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: blue;
+}
+
+.grid-container {
+  color: bisque;
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  grid-template-rows: 0fr ;
+  grid-template-areas:
+    "side header header header"
+    "side main main main";
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area:header ;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px 0 30px;
+  background-color: aqua;
+}
+/*End Header*/
+
+/* Side */
+#side{
+  grid-area: side;
+  height: 100%;
+  background-color: blueviolet;
+
+}
+
+.side-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.side-brand{
+  margin-top: 15px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.side-list{
+  padding: 0;
+  list-style-type: none;
+}
+
+.items{
+  padding: 20px 20px 20px 20px;
+  font-size: 30px;
+}
+/* End Side */
+
+/* Home */
+.home-container{
+grid-area: main;
+  display: flex;
+  background-color: red;
+}
+
+h3 {
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  font-size: 40px;
+  font-weight: 900;
+
+}
+/* End Home */
+
+/* Table */
+/* .table-container{
+  display: flex;
+  height: 100%;
+  width: 100px;
+} */
+
+/* End Table */
