@@ -5,16 +5,16 @@ function Side() {
     <aside id='side'>
     <div className='side-title'>
       <div className='side-brand'>
-            Categories 
+           CATEGORIES
       </div>
 
     </div>
     <ul className='side-list'>
       <li className='items'>
-        <a href="">WELCOME</a>
+        <a >WELCOME</a>
       </li>
       <li className='items'>
-        <a href="">MANAGING</a>
+        <a >MANAGING</a>
       </li>
 
     </ul>
