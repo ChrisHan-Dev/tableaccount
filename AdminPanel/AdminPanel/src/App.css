@@ -190,4 +190,12 @@ p{
   margin-top: -2px;
 }
 
-/* End Table */
+#editButton{
+  position: relative;
+  height: 50px;
+  width: 60px;
+  padding: 0%;
+  
+}
+
+/* End Table 7/

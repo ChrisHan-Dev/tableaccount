@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-
 function AccTable() {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
@@ -15,7 +14,6 @@ function AccTable() {
     setShowPass((prevShowPass) => !prevShowPass);
   };
 
-  
   const handleEmailChange = (e) => {
     const input = e.target.value;
     setEmail(input);
@@ -30,9 +28,8 @@ function AccTable() {
     console.log("password:", password);
     if (name && email && password) {
       // Thêm người dùng vào mảng data
-      const newUser = { id : data.length + 1, name, email, password };
+      const newUser = { id: data.length + 1, name, email, password };
       setData((prevData) => [...prevData, newUser]);
-
 
       // Reset các input về chuỗi rỗng
       setName("");
@@ -41,9 +38,8 @@ function AccTable() {
     } else {
       alert("Vui lòng nhập đầy đủ thông tin!");
     }
-   
   };
-  console.log(name)
+  console.log(name);
 
   return (
     <div className="table-container">
@@ -75,7 +71,7 @@ function AccTable() {
               style={{
                 paddingRight: "40px", // Space for the button inside the input
                 width: "200px", // Adjust width as needed
-                height: "30px"
+                height: "30px",
               }}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -102,10 +98,10 @@ function AccTable() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Status</th>
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
+            <th>Edit</th>
             <th>Role</th>
           </tr>
         </thead>
@@ -119,11 +115,20 @@ function AccTable() {
           {data.map((user, index) => (
             <tr key={index}>
               <td>{user.id}</td>
-              <td>{user.status}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
               <td>{user.password}</td>
-              <td>{user.role}</td>
+              <td>
+                {user.edit}
+                <button
+                  type="button"
+                  id="editButton"
+                >
+                  Edit
+                </button>
+              </td>
+              <td>
+                {user.role}</td>
             </tr>
           ))}
         </tbody>
