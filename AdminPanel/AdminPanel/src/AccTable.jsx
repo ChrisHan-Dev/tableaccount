@@ -8,6 +8,12 @@ function AccTable() {
   const [isValid, setIsValid] = useState(true);
   const [showPass, setShowPass] = useState(false);
 
+  const roles = ['Admin', 'User' , 'Other']
+  const handleRoleChange =() => {
+
+  }
+
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const togglePassVisibility = () => {
@@ -91,7 +97,7 @@ function AccTable() {
               {showPass ? "Hide" : "Show"}
             </button>
           </div>
-          <button className="add-button">Add</button>
+          <button className="add-button" disabled={!isValid}>Add</button>
         </form>
       </div>
       <table className="styled-table">
@@ -126,9 +132,16 @@ function AccTable() {
                 >
                   Edit
                 </button>
+                <button
+                  type="button"
+                  id="editButton"
+                >
+                  Delete
+                </button>
               </td>
               <td>
-                {user.role}</td>
+                <select value={user.role}>
+                  </select></td>
             </tr>
           ))}
         </tbody>
